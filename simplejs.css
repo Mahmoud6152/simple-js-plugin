@@ -1,0 +1,114 @@
+.slider-area {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+/* slides container */
+.slider-area>div:nth-child(1) {
+  position: relative;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+}
+/* slides */
+.slider-area>div:nth-child(1) div {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  transition: all 1s;
+}
+/* images */
+.slider-area>div:nth-child(1) div>* {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* pagination container */
+.slider-area>div:nth-child(2) {
+  width: 100%;
+  height: 5%;
+  position: absolute;
+  top: 95%;
+  display: flex;
+  justify-content: center;
+}
+/* pagination dots */
+.slider-area>div:nth-child(2) span {
+  margin: 2px;
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border: 2px solid;
+  border-radius: 100%;
+  cursor: pointer;
+}
+/* buttons containers */
+.slider-area>div:nth-child(3), .slider-area>div:nth-child(4) {
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+/* right button container */
+.slider-area>div:nth-child(4) {
+  right: 0%;
+}
+/* buttons */
+.slider-area>div:nth-child(3) .slider-buttons, .slider-area>div:nth-child(4) .slider-buttons {
+  border: solid black;
+  border-width: 3px 3px 0px 0;
+  display: inline-block;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* left button */
+.slider-area>div:nth-child(3) .slider-buttons {
+  transform: rotate(-135deg);
+}
+
+/* right button */
+.slider-area>div:nth-child(4) .slider-buttons {
+   transform: rotate(45deg);
+}
+
+.fade-parked {
+  opacity: 0;
+  display: inline;
+}
+
+.fade-active {
+  opacity: 1;
+}
+
+.fade-active~div {
+  opacity: 0;
+}
+
+.parked {
+  transform: translate(-100%, 0);
+}
+
+.active {
+  transform: translate(0, 0);
+}
+
+.active~div {
+  transform: translate(100%, 0);
+}
