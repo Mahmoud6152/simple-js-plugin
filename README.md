@@ -61,3 +61,5 @@ simpleJs.start({
   btnIcons: {left: '<i></i>', right:'<i></i>'} //the icons to use as buttons, put what you would normally use in your html inside quotation marks, the defulat is an empty <i> tag
 });
 ```
+## Demo ##
+https://simple-js.glitch.me/
